@@ -514,6 +514,9 @@ p.project-description {
   font-weight: 700;
 }
 
+.project-type{
+  display: block;
+}
 
 
 
