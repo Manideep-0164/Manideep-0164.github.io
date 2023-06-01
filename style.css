@@ -289,36 +289,53 @@ section .title::after {
 
 .about .about-content .left {
   width: 35%;
-  height: 70vh;
-  padding: 10px;
+  padding: 20px;
+  height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .about .about-content .left img {
-  height: 100%;
-  /* width: 100%; */
-  box-sizing: border-box;
-  margin: auto;
-  border-radius: 10px;
-  overflow: hidden;
-  object-fit: cover;
-  /* padding: 50px; */
-  /* border-radius: 6px; */
+    box-sizing: border-box;
+    overflow: hidden;
+    object-fit: contain;
+    border: 4.5px solid red;
+    padding-right: 14px;
+    /* background-color: #272937; */
+    border-radius: 10px;
+    filter: grayscale(20%);
 }
 
-/* .about .about-content .left img::after{
-  content: "";
+.about .about-content .left::before {
+  /* content: ""; */
   position: absolute;
-  height: 80px;
-  width: 80px;
-  border-bottom:10px solid #b91c1c;
-  border-right:10px solid #b91c1c;
-  right: 20px;
-  bottom: -40px;
+  height: 50px;
+  width: 50px;
+  border-top: 10px solid rgb(185, 28, 28);
+  border-left: 10px solid rgb(185, 28, 28);
+  left: 2px;
+  top: 47px;
+  /* z-index: 20; */
+ /* border-bottom-right-radius: 5px; */
 
-} */
+}
+
+
+.about .about-content .left::after {
+  /* content: ""; */
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-bottom: 10px solid rgb(185, 28, 28);
+  border-right: 10px solid rgb(185, 28, 28);
+  right: 2px;
+  bottom: 47px;
+  /* z-index: 20; */
+ /* border-bottom-right-radius: 5px; */
+
+}
 
 .about .about-content .right {
   width: 55%;
@@ -472,6 +489,7 @@ p.project-description {
   height: 50%;
   text-align: justify;
 }
+
 /* .projects .serv-content .card:hover .box {
   transform: scale(1.05);
 } */
@@ -506,15 +524,15 @@ p.project-description {
   width: 60%;
 }
 
-.techstack p{
+.techstack p {
   margin: 15px 0px;
 }
 
- .techstack p span{
+.techstack p span {
   font-weight: 700;
 }
 
-.project-type{
+.project-type {
   display: block;
 }
 
@@ -704,7 +722,7 @@ p.project-description {
 /* .github {
 } */
 
-.js-calendar-graph-svg{
+.js-calendar-graph-svg {
   padding: 40px;
 }
 
@@ -714,7 +732,7 @@ p.project-description {
   border: none;
 }
 
-.github .calendar .contrib-number{
+.github .calendar .contrib-number {
   color: #9e999985;
 }
 
@@ -765,7 +783,7 @@ p.project-description {
   padding: 5px;
 }
 
-.contact .contact-content .row:nth-child(2) i{
+.contact .contact-content .row:nth-child(2) i {
   padding: 6px;
 }
 
@@ -774,12 +792,15 @@ p.project-description {
   font-weight: 500;
 }
 
-#contact-phone, #contact-email{
+#contact-phone,
+#contact-email {
   border: 1.5px solid transparent;
   padding: 5px 8px;
   border-radius: 5px;
 }
-#contact-phone:hover, #contact-email:hover{
+
+#contact-phone:hover,
+#contact-email:hover {
   border-color: #b91c1c;
 }
 
@@ -795,7 +816,7 @@ p.project-description {
   border-radius: 5px;
 }
 
-.contact .contact-content .info .sub-title:hover{
+.contact .contact-content .info .sub-title:hover {
   border-color: #b91c1c;
 }
 
@@ -974,8 +995,6 @@ footer span a:hover {
   }
 
   .about .about-content .left img {
-    /* border-radius: 0px; */
-    height: 90%;
     object-fit: contain;
   }
 
@@ -1008,6 +1027,13 @@ footer span a:hover {
     display: none;
     padding-top: 30px;
     border: none;
+  }
+}
+
+@media (min-width: 700px) and (max-width:947px)
+{
+  .about .about-content .left img {
+    height: 90%;
   }
 }
 
@@ -1140,8 +1166,8 @@ footer span a:hover {
 .liveBtn:hover {
   /* box-shadow: 0px 0.5px 1.5px rgba(255, 0, 0),
     inset 0px 0.8px 0px -0.25px rgb(255, 0, 0); */
-    /* box-shadow: rgb(214 3 3 / 77%) 0px 0px 0px 1px; */
-    background-color: red;
+  /* box-shadow: rgb(214 3 3 / 77%) 0px 0px 0px 1px; */
+  background-color: red;
   /* background-color: #f1f1f1;
   border: 2px solid #2253c8;
   color: #333; */
@@ -1201,14 +1227,17 @@ footer span a:hover {
 .git-box img {
   width: 100%;
 }
-#github-streak-stats{
+
+#github-streak-stats {
   border: 1px solid;
   border-radius: 5px;
 }
-#github-top-langs{
+
+#github-top-langs {
   padding: 0px 30px;
 }
-footer > span > i{
+
+footer>span>i {
   color: #b91c1c;
 }
 
